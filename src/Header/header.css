@@ -1,0 +1,10 @@
+header {
+  display: flex;
+  justify-content: space-around;
+}
+
+.log-in-button {
+  height: 2.5em;
+  width: 5em;
+  border: 1px solid darkgrey;
+}
