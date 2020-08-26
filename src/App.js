@@ -1,15 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import Header from './Header/Header';
+import AllMovies from './AllMoviesPage/AllMovies'
+
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Hello</h1>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor() {
+    super()
+      this.state = {
+        movies: [],
+        error: '',
+        user: {},
+      }
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <Header />
+        <AllMovies />
+      </div>
+    );
+  }
 }
 
 export default App;
