@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './Header/Header';
 import AllMovies from './AllMoviesPage/AllMovies'
+import Login from './Login'
 import { getAllMovies } from './APICalls/APICalls'
 
 import './App.css';

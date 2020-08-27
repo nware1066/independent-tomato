@@ -14,11 +14,10 @@ class Login extends Component  {
       }
   }
 
-
-
   handleLogIn = (event) => {
     event.preventDefault();
-    
+    getUser(this.state.username, this.state.password);
+    console.log(this.state.username)
   }
 
   render() {
