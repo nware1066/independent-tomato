@@ -1,6 +1,7 @@
-import React { Component } from 'react'
-import './login.css'
-import { getUser } from './APICalls/APICalls'
+import React, { Component } from 'react'
+import './Login.css'
+import { getUser } from '../APICalls/APICalls'
+import { Redirect, Link } from 'react-router-dom'
 
 
 class Login extends Component  {
@@ -14,14 +15,18 @@ class Login extends Component  {
       }
   }
 
+  handleInputChange = event => {
+    this.setState({ [event.target.name]: event.target.value })
+  }
+
   handleLogIn = (event) => {
     event.preventDefault();
     getUser(this.state.username, this.state.password);
-    console.log(this.state.username)
+    console.log(this.getUser);
   }
 
   render() {
-    return {
+    return (
       <section className='login-container'>
         <form className='login-form'>
           <label ClassName='login-label' for='user-name'>name</label>
@@ -43,9 +48,9 @@ class Login extends Component  {
           <button onClick={ event => this.handleLogIn(event)}>Submit</button>
         </form>
       </section>
-    }
+    )
   }
-
 }
+
 
 export default Login

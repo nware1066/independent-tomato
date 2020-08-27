@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Header from './Header/Header';
 import AllMovies from './AllMoviesPage/AllMovies'
-import Login from './Login'
+import Login from './Login/Login'
+import { Route, Switch, render } from 'react-router-dom'
 import { getAllMovies } from './APICalls/APICalls'
 
 import './App.css';
