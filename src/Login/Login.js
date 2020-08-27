@@ -1,5 +1,7 @@
 import React { Component } from 'react'
 import './login.css'
+import { getUser } from './APICalls/APICalls'
+
 
 class Login extends Component  {
   constructor(props) {
@@ -11,6 +13,8 @@ class Login extends Component  {
         error: ''
       }
   }
+
+
 
   handleLogIn = (event) => {
     event.preventDefault();
