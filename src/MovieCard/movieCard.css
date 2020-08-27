@@ -1,7 +1,9 @@
 .movieCard {
-  background-color: teal;
-  border: 1px solid #101357;
-  padding-bottom: 1em;
+    background-color: teal;
+    border: 1px solid #101357;
+    /* padding-bottom: 1em; */
+    margin: 0.5em;
+    width: 20vw;
 }
 
 .movieCard > img {

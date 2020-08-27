@@ -15,15 +15,9 @@ class App extends Component {
       }
   }
 
-  // componentDidMount() {
-  //   getIdeas()
-  //     .then(ideas => this.setState({ ideas }))
-  //     .catch(err => console.error(err.message))
-  // }
-
   componentDidMount() {
     getAllMovies()
-      .then(movies => this.setState({movies}))
+      .then(movies => this.setState({movies: movies.movies}))
       .catch(error => this.setState({error: 'something went wrong'}))
   }
 
@@ -31,7 +25,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <AllMovies />
+        <AllMovies movies={this.state.movies} />
       </div>
     );
   }

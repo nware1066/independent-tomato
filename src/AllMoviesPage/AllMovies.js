@@ -5,10 +5,12 @@ import MovieCard from '../MovieCard/MovieCard'
 //
 
 function AllMovies(props) {
-  // get movies array from App and map to create set of cards
+  const allMovieCards = props.movies.map(movie => {
+    return <MovieCard img={movie.poster_path} title={movie.title}/>
+  })
   return (
-    <section className="all-movies-component">
-      <p className="card-container">cards go here</p>
+    <section className="all-movies-component card-container">
+      {allMovieCards}
     </section>
   )
 }
