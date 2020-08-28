@@ -27,18 +27,16 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <BrowserRouter>
-          <div>
+        <div>
           <Link to="/">All Movies</Link>
           <Link to="/login">Login</Link>
-          </div>
-            <Route exact path='/'>
-              <AllMovies movies={this.state.movies}/>
-            </Route>
-            <Route exact path='/login'>
-              <Login />
-            </Route>
-        </BrowserRouter>
+        </div>
+        <Route exact path='/'>
+          <AllMovies movies={this.state.movies}/>
+        </Route>
+        <Route exact path='/login'>
+          <Login />
+        </Route>
       </div>
     );
   }
