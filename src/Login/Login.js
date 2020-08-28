@@ -1,8 +1,6 @@
 import React, { Component } from 'react'
 import './Login.css'
 import { getUser } from '../APICalls/APICalls'
-import { Redirect, Link } from 'react-router-dom'
-
 
 class Login extends Component  {
   constructor(props) {
@@ -29,21 +27,23 @@ class Login extends Component  {
     return (
       <section className='login-container'>
         <form className='login-form'>
-          <label ClassName='login-label' for='user-name'>name</label>
+          <label className='login-label' htmlFor='username'>name</label>
           <input
             className='login-input'
             type='text'
             name='username'
             placeholder='username'
             value={this.state.username}
+            onChange = {this.handleInputChange}
           />
-          <label ClassName='login-label' for='user-password'>password</label>
+          <label className='login-label' htmlFor='password'>password</label>
           <input
             className='login-input'
             type='text'
             name='password'
             placeholder='password'
             value={this.state.password}
+            onChange = {this.handleInputChange}
           />
           <button onClick={ event => this.handleLogIn(event)}>Submit</button>
         </form>

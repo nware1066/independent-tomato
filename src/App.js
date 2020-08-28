@@ -28,36 +28,21 @@ class App extends Component {
       <div className="App">
         <Header />
         <BrowserRouter>
-        // <Route path='/' render={ () => <AllMovies movies={this.state.movies} /> } />
-        // <Route path='/Login' render={ () => <Login /> } />
           <div>
-             <Link to="/">All Movies</Link>
-             <Link to="/">Login</Link>
+          <Link to="/">All Movies</Link>
+          <Link to="/login">Login</Link>
           </div>
-          <Switch>
             <Route exact path='/'>
               <AllMovies movies={this.state.movies}/>
             </Route>
-            <Route path='/login'>
+            <Route exact path='/login'>
               <Login />
             </Route>
-          </Switch>
         </BrowserRouter>
       </div>
     );
   }
 
-  // <Switch>
-  //         <Route exact path="/">
-  //           <Home />
-  //         </Route>
-  //         <Route path="/about">
-  //           <About />
-  //         </Route>
-  //         <Route path="/dashboard">
-  //           <Dashboard />
-  //         </Route>
-  //       </Switch>
 }
 
 export default App;
