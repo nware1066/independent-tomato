@@ -20,7 +20,7 @@ class Login extends Component  {
   handleLogIn = (event) => {
     event.preventDefault();
     getUser(this.state.username, this.state.password);
-    console.log(this.getUser);
+    console.log('getUser', this.state.username);
   }
 
   render() {

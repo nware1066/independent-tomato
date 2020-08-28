@@ -23,9 +23,8 @@ export function getUser(username, password) {
       'password': password
     })
   })
-    .then(response => response.JSON())
-    .then(data => this.setState({user: data.user}))
-    .catch(error => {
-    this.setState({error: 'Something went wrong, please check your information'})
-    })
-}
+    .then(response => response.json())
+    // .catch(error => {
+    // this.setState({error: 'Something went wrong, please check your information'})
+    }
+// }
