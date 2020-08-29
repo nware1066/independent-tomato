@@ -1,5 +1,6 @@
 import React from 'react'
 import './header.css'
+import Login from '../Login/Login'
 
 function Header() {
   return (
@@ -7,7 +8,7 @@ function Header() {
       <section>
         <h1>Welcome</h1>
       </section>
-      <button className="log-in-button">Log In</button>
+
     </header>
   )
 }

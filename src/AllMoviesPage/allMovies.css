@@ -1,10 +1,27 @@
 body {
-    background-color: teal;
+    background-color: #CE6C47;
 }
 
 .all-movies-component {
 
 }
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+/*
+Bright blue: #51e2f5
+
+Blue Green: #9df9ef
+
+Dusty White: #edf756
+
+Pink Sand: #ffa8B6
+
+Dark Sand: #a28089 */
 
 /* Mountain Shadow Blue: #101357
 
