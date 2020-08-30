@@ -13,7 +13,7 @@ export const getAllMovies = () => {
 }
 
 export function getUser(username, password) {
-  return fetch('https://rancid-tomatillos.herokuapp.com/api/v2/login', {
+  const fetchedUserData = fetch('https://rancid-tomatillos.herokuapp.com/api/v2/login', {
     method: 'POST',
     headers: {
       'Content-TYpe': 'application/json'
@@ -23,8 +23,10 @@ export function getUser(username, password) {
       'password': password
     })
   })
-    .then(response => response.json())
+  .then(response => response.json())
+  console.log(fetchedUserData)
+  return fetchedUserData
     // .catch(error => {
     // this.setState({error: 'Something went wrong, please check your information'})
-    }
+}
 // }

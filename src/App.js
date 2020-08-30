@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import Header from './Header/Header';
-import AllMovies from './AllMoviesPage/AllMovies'
-import Login from './Login/Login'
-import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom'
+import AllMovies from './AllMoviesPage/AllMovies';
+import Login from './Login/Login';
+import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
 import { getAllMovies } from './APICalls/APICalls'
 
 import './App.css';
 
 class App extends Component {
-  constructor() {
+constructor() {
     super()
       this.state = {
         movies: [],
@@ -27,7 +27,7 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-      
+
         <div>
           <Link to="/">All Movies</Link>
         </div>
