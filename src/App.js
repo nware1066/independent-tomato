@@ -27,9 +27,9 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
+      
         <div>
           <Link to="/">All Movies</Link>
-          <Link to="/login">Login</Link>
         </div>
         <Route exact path='/'>
           <AllMovies movies={this.state.movies}/>
