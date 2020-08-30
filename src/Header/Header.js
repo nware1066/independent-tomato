@@ -6,9 +6,9 @@ import { BrowserRouter, Route, Switch, Link } from 'react-router-dom'
 function Header() {
   return (
     <header>
-      <section>
+      <section className="header-section">
         <h1>Welcome</h1>
-        <Link to="/login">Login</Link>
+        <Link to="/login"><button className="login-button">Log in</button></Link>
       </section>
 
     </header>

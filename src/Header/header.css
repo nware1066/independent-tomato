@@ -1,7 +1,8 @@
-header {
+.header-section {
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-around;
   height: 6em;
   color: #81ADC8;
   font-size: 28px;
@@ -10,7 +11,7 @@ header {
   background-color: #960200;
 }
 
-.log-in-button {
+.login-button {
   height: 2.5em;
   width: 5em;
   border: 1px solid #101357;
