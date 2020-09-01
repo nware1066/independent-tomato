@@ -30,25 +30,29 @@ class Login extends Component  {
     return (
       <section className='login-container'>
         <form className='login-form'>
-          <label className='login-label' htmlFor='username'>name</label>
-          <input
-            className='login-input'
-            type='text'
-            name='username'
-            placeholder='username'
-            value={this.state.username}
-            onChange = {this.handleInputChange}
-          />
-          <label className='login-label' htmlFor='password'>password</label>
-          <input
-            className='login-input'
-            type='text'
-            name='password'
-            placeholder='password'
-            value={this.state.password}
-            onChange = {this.handleInputChange}
-          />
-          <button onClick={ event => this.handleLogIn(event)}>Submit</button>
+          <div className='login-username'>
+            <label className='login-label' htmlFor='username'>name:</label>
+            <input
+              className='login-input'
+              type='text'
+              name='username'
+              placeholder='username'
+              value={this.state.username}
+              onChange = {this.handleInputChange}
+            />
+          </div>
+          <div className='login-password'>
+            <label className='login-label' htmlFor='password'>password:</label>
+            <input
+              className='login-input'
+              type='password'
+              name='password'
+              placeholder='password'
+              value={this.state.password}
+              onChange = {this.handleInputChange}
+            />
+          </div>
+          <button className='submit-button' onClick={ event => this.handleLogIn(event)}>Submit</button>
         </form>
       </section>
     )
