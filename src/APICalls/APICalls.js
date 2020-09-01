@@ -12,7 +12,7 @@ export const getAllMovies = () => {
   .then(response => response.json())
 }
 
-export function getUser(username, password) {
+export function postUser(username, password) {
   const fetchedUserData = fetch('https://rancid-tomatillos.herokuapp.com/api/v2/login', {
     method: 'POST',
     headers: {

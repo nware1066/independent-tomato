@@ -15,6 +15,8 @@ constructor() {
         error: '',
         user: {},
       }
+      this.getUser = this.getUser.bind(this);
+      console.log(this.getUser)
   }
 
   componentDidMount() {
@@ -23,11 +25,16 @@ constructor() {
       .catch(error => this.setState({error: 'something went wrong'}))
   }
 
+  // import fetchedUserData from Login
+  getUser(user) {
+    console.log(user)
+    this.setState({user})
+  }
+
   render() {
     return (
       <div className="App">
         <Header />
-
         <div>
           <Link to="/">All Movies</Link>
         </div>
@@ -35,7 +42,7 @@ constructor() {
           <AllMovies movies={this.state.movies}/>
         </Route>
         <Route exact path='/login'>
-          <Login />
+          <Login getUser={this.getUser}/>
         </Route>
       </div>
     );
