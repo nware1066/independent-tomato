@@ -1,20 +1,22 @@
 import React, { Component } from 'react';
 import Header from './Header/Header';
-import AllMovies from './AllMoviesPage/AllMovies'
-import Login from './Login/Login'
-import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom'
+import AllMovies from './AllMoviesPage/AllMovies';
+import Login from './Login/Login';
+import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
 import { getAllMovies } from './APICalls/APICalls'
 
 import './App.css';
 
 class App extends Component {
-  constructor() {
+constructor() {
     super()
       this.state = {
         movies: [],
         error: '',
         user: {},
       }
+      this.getUser = this.getUser.bind(this);
+      console.log(this.getUser)
   }
 
   componentDidMount() {
@@ -23,19 +25,24 @@ class App extends Component {
       .catch(error => this.setState({error: 'something went wrong'}))
   }
 
+  // import fetchedUserData from Login
+  getUser(user) {
+    console.log(user)
+    this.setState({user})
+  }
+
   render() {
     return (
       <div className="App">
         <Header />
         <div>
           <Link to="/">All Movies</Link>
-          <Link to="/login">Login</Link>
         </div>
         <Route exact path='/'>
           <AllMovies movies={this.state.movies}/>
         </Route>
         <Route exact path='/login'>
-          <Login />
+          <Login getUser={this.getUser}/>
         </Route>
       </div>
     );

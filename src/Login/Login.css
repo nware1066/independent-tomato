@@ -1,16 +1,35 @@
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 
+}
 
+.login-username {
+  margin-top: 5em;
+  margin-bottom: 2em;
+  margin-right: 4em;
+  font-size: 24px;
+}
 
+.login-password {
+  font-size: 24px;
+  margin-right: 5.5em;
 
+}
 
+.login-input {
+  height: 2em;
+  width: 15em;
+  border: 1px solid #101357;
+  background-color: #81ADC8;
+}
 
-
-/* Bright blue: #51e2f5
-
-Blue Green: #9df9ef
-
-Dusty White: #edf756
-
-Pink Sand: #ffa8B6
-
-Dark Sand: #a28089 */
+.submit-button {
+  align-self: center;
+  margin-top: 4em;
+  width: 20em;
+  height: 2em;
+  border: 1px solid #101357;
+  background-color: #81ADC8;
+}
