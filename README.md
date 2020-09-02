@@ -12,7 +12,7 @@ In this project, our learning goals were to:
 - Solidify component and asynchronous JS testing
 - Work with and navigate a shared, persistent API using GET, POST, and DELETE requests
 
-![image of form page](https://media.giphy.com/media/ZDz0MB4wabco1cwv3H/giphy.gif)<br />  
+![image of form page](https://media.giphy.com/media/ZCkdBaZZ99tWCIaa8r/giphy.gif)<br />  
 <br />  
 
 # Challenges
