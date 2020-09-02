@@ -25,7 +25,7 @@ I was hampered by internet difficulties, which cost me an entire day of work, an
 
 # Wins
 
-I was able to get some real understanding of how React functions, how components work together and a stong understanding of "Data down, Actions up".
+I was able to get some real understanding of how React functions and components work together as well as a much stronger understanding of "Data down, Actions up".
 
 I was able to successfully fetch and post and update state in different components than were the functions were invoked.
 
