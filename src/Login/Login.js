@@ -10,7 +10,6 @@ class Login extends Component  {
         email: '',
         password: '',
         error: '',
-        isLoggedIn: false
       }
   }
 
@@ -20,16 +19,13 @@ class Login extends Component  {
 
   handleLogIn = (event) => {
     event.preventDefault();
-    // resolve promise of fetchedUserData
     postUser(this.state.username, this.state.password)
     .then(user => this.props.getUser(user))
-    .then(this.setState({isLoggedIn: true}));
-    // send user to App.js
-
+    .then(isLoggedIn => this.props.logInUser({isLoggedIn: true}));
   }
 
   render() {
-    if (this.state.isLoggedIn) {
+    if (this.props.isLoggedIn) {
       return <Redirect to='/' />
     }
     return (
@@ -50,7 +46,7 @@ class Login extends Component  {
             <label className='login-label' htmlFor='password'>password:</label>
             <input
               className='login-input'
-              type='password'
+              type='text'
               name='password'
               placeholder='password'
               value={this.state.password}
