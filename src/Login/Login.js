@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import './Login.css'
 import { postUser } from '../APICalls/APICalls'
-
+import { Redirect } from 'react-router-dom'
 class Login extends Component  {
   constructor(props) {
     super(props)
@@ -9,7 +9,7 @@ class Login extends Component  {
         username: '',
         email: '',
         password: '',
-        error: ''
+        error: '',
       }
   }
 
@@ -19,14 +19,15 @@ class Login extends Component  {
 
   handleLogIn = (event) => {
     event.preventDefault();
-    // resolve promise of fetchedUserData
     postUser(this.state.username, this.state.password)
-    .then(user => this.props.getUser(user));
-    // send user to App.js
-
+    .then(user => this.props.getUser(user))
+    .then(isLoggedIn => this.props.logInUser({isLoggedIn: true}));
   }
 
   render() {
+    if (this.props.isLoggedIn) {
+      return <Redirect to='/' />
+    }
     return (
       <section className='login-container'>
         <form className='login-form'>
@@ -45,7 +46,7 @@ class Login extends Component  {
             <label className='login-label' htmlFor='password'>password:</label>
             <input
               className='login-input'
-              type='password'
+              type='text'
               name='password'
               placeholder='password'
               value={this.state.password}

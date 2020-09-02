@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Header from './Header/Header';
 import AllMovies from './AllMoviesPage/AllMovies';
 import Login from './Login/Login';
-import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Link, NavLink, Redirect } from 'react-router-dom';
 import { getAllMovies } from './APICalls/APICalls'
 
 import './App.css';
@@ -14,9 +14,10 @@ constructor() {
         movies: [],
         error: '',
         user: {},
+        isLoggedIn: false
       }
       this.getUser = this.getUser.bind(this);
-      console.log(this.getUser)
+      this.logInUser = this.logInUser.bind(this);
   }
 
   componentDidMount() {
@@ -25,24 +26,28 @@ constructor() {
       .catch(error => this.setState({error: 'something went wrong'}))
   }
 
-  // import fetchedUserData from Login
   getUser(user) {
-    console.log(user)
-    this.setState({user})
+    this.setState(user)
+  }
+
+  logInUser(isLoggedIn) {
+    this.setState(isLoggedIn)
+    console.log(this.state.isLoggedIn)
   }
 
   render() {
     return (
       <div className="App">
-        <Header />
+      <Header user={this.state.user} isLoggedIn={this.state.isLoggedIn}/>
         <div>
-          <Link to="/">All Movies</Link>
+          <Link to="/"></Link>
         </div>
         <Route exact path='/'>
           <AllMovies movies={this.state.movies}/>
         </Route>
         <Route exact path='/login'>
-          <Login getUser={this.getUser}/>
+          <Login getUser={this.getUser} logInUser={this.logInUser}
+            isLoggedIn={this.state.isLoggedIn}/>
         </Route>
       </div>
     );
