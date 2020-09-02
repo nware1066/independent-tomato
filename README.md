@@ -12,7 +12,8 @@ In this project, our learning goals were to:
 - Solidify component and asynchronous JS testing
 - Work with and navigate a shared, persistent API using GET, POST, and DELETE requests
 
-<iframe src="https://giphy.com/embed/f6PpwesqXh1bRJfUdM" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/f6PpwesqXh1bRJfUdM">via GIPHY</a></p>
+![image of form page](https://media.giphy.com/media/ZDz0MB4wabco1cwv3H/giphy.gif)<br />  
+<br />  
 
 # Challenges
 
